@@ -1,6 +1,8 @@
 const handlers = require('./handlers.js');
+const path = require('path');
+
 const arr = [
-    '/style.css',
+    '/styles.css',
     '/reset.css',
     '/dom.js',
     '/request.js',
@@ -9,13 +11,15 @@ const arr = [
   ];
 
 const router = (request, response) =>{
-      console.log('I am in the router');
+    
       const url = request.url;
     if (url === "/"){
         handlers.homeRoute(request, response);
     }else if (arr.includes(url)) {
         handlers.publicRoute(request, response, url);
         
+    }else if(url.includes("search")){
+        handlers.handleRequest(request, response)
     }else{
         response.writeHead(404, {'Content-Type':'text/html'});
         response.end('<h1>404 server error</h1>')

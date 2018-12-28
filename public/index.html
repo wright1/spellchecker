@@ -4,22 +4,31 @@
      <meta charset="UTF-8"/>
      <meta name="viewport" content="width=device-width, initial-scale=1"/>
      <title>spellChecker</title>
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans|UnifrakturMaguntia" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Open+Sans" rel="stylesheet">
      <link rel="stylesheet" href="reset.css"/>
-     <link rel="stylesheet" type="text/css" href="styles.css"/>
+     <link   rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <section id="search">
         <header>
-            <h1>Spellchecker</h1>
+            <h1 id="title">Spellchecker</h1>
             <h2>Harry Potter's Spells and Charms</h2>
         </header>
+
+        <form action="/search" id="form">
         <label for="spell-search">Search for spells</label>
-        <input type="search" id="spell-search" name="spell"
-        aria-label="search through all the spells">
-        <button>Search</button>
+        <input type="search" id="spell-search" name="spell" aria-label="search through all the spells">
+        <input type="submit" id="button" value="get the spell">
+        </form>
+        <div id="dropdown">
+            
+        </div>
+
     </section>
 </body>
+
+<script src="dom.js"></script>
+<script src="request.js"></script>
 
 
 

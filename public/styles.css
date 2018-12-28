@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color: #EBF0F6;
+    font-family: "Open Sans";
+}
+#title{
+    margin: auto;
+    font-family: 'Mountains of Christmas';
+    font-size: 5em;
+
+}
+
+#spell-search{
+    padding: 1em;
+    outline: none;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #344955; 
+    width: 40%;
+    margin-left: 2em;
+
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3em;
+    
+}
+
+form{
+    text-align: center;
+}
+
+#button{
+    padding: 0.9em;
+    border-radius: 0.5em;
+    background-color: #344955;
+    color: white;
+    margin-left: 1em;
+    font-family: "Open Sans";
+}
+
+label{
+    margin-left: 3em;
+    font-size: 1.3em;
+}
+
+#dropdown{
+    margin-left: 35%;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+.listItem{
+    padding: 1em;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #E7E7E7;
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    
+
+}
+a{
+    text-decoration: none;
+    color:#344955;
+}
