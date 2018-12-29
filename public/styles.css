@@ -6,7 +6,7 @@ body{
     background-color: #EBF0F6;
     font-family: "Open Sans";
 }
-#title{
+#title, #spell-title{
     margin: auto;
     font-family: 'Mountains of Christmas';
     font-size: 5em;
