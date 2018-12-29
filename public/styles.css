@@ -43,6 +43,7 @@ form{
     color: white;
     margin-left: 1em;
     font-family: "Open Sans";
+    outline: none;
 }
 
 label{

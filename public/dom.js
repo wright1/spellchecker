@@ -61,7 +61,16 @@ const listValue = (e) =>{
     })
 };
 
-// button.addEventListener("click")
+const result = (response) =>{
+
+    console.log(response)
+
+}
+
+button.addEventListener("click", () =>{
+
+    makeResultRequest(elSearch.value, result)
+})
 
 elList.addEventListener("click", (e) =>{
     console.log("list event triggered")

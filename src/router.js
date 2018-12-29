@@ -20,6 +20,10 @@ const router = (request, response) =>{
         
     }else if(url.includes("search")){
         handlers.handleRequest(request, response)
+
+    }else if(url.includes("resultObject")){
+        handlers.finalRequest(request, response, url)
+
     }else{
         response.writeHead(404, {'Content-Type':'text/html'});
         response.end('<h1>404 server error</h1>')

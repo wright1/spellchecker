@@ -44,6 +44,8 @@ const publicRoute = (request, response, url) => {
   };
 
   const handleRequest = (request, response) =>{
+
+    console.log(request.url)
     method = request.method;
     if (method === 'GET') {
       // console.log('spells', spells[0]); // currently not logging!
@@ -60,9 +62,25 @@ const publicRoute = (request, response, url) => {
     }
   };
 
+  const finalRequest = (request, response, url) =>{
+
+    const method = request.method;
+    const formatSearchName = request.url.replace(/%20/g, " ")
+    const searchName = formatSearchName.split('=')[1];
+        console.log(searchName)
+    const resultObj = spells.filter(spell => {
+      let name = spell.name || spell.define || '';
+       name.replace(/%20/g, " ");
+      return name == searchName;
+    })
+
+    response.end(JSON.stringify(resultObj))
+  }
+
 
 module.exports = {
     homeRoute,
     publicRoute,
-    handleRequest
+    handleRequest,
+    finalRequest
 }
