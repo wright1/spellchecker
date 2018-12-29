@@ -1,6 +1,9 @@
 const elSearch = document.getElementById("spell-search");
 const elList = document.getElementById("dropdown");
 const button = document.getElementById("button");
+const spellTitle = document.getElementById("spell-title");
+const say = document.getElementById('say');
+const description = document.getElementById('description');
 
 
 
@@ -45,13 +48,7 @@ const domCb = (response) =>{
 
 const listValue = (e) =>{
     console.log(event.target)
-    if (event.target != event.currentTarget){
-        clickedItem = event.target.value;
-        
-        
-    }else {
-        e.stopPropagation();
-    }
+    //places the chosen link text into the searchbar and removes all autocomplete suggestions
     let linkArr = document.querySelectorAll('a');
     event.preventDefault()
     elSearch.value = event.target.textContent;
@@ -62,6 +59,16 @@ const listValue = (e) =>{
 };
 
 const result = (response) =>{
+
+    const name = response[0].name || response[0].define || '';
+    const pronouce = response[0].pronunciation || '';
+    const describe = response[0].description;
+    elSearch.value = "";
+
+    spellTitle.textContent = name;
+    say.textContent = pronouce;
+    description.textContent = describe;
+    
 
     console.log(response)
 

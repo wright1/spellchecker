@@ -73,3 +73,23 @@ a{
     text-decoration: none;
     color:#344955;
 }
+#result{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.description{
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+#spell-title{
+    color: #F0B300;
+    font-size: 3em;
+}
+
+p{
+    font-size: 1.2em;
+    color: #F0B300;
+}

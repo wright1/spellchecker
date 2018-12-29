@@ -65,12 +65,12 @@ const publicRoute = (request, response, url) => {
   const finalRequest = (request, response, url) =>{
 
     const method = request.method;
-    const formatSearchName = request.url.replace(/%20/g, " ")
-    const searchName = formatSearchName.split('=')[1];
+    let formatSearchName = request.url.replace(/%20/g, " ");//places spaces into url
+    let formatedSearchName = formatSearchName.replace(/%27/g, "'");//places apostrophe into url
+    const searchName = formatedSearchName.split('=')[1];
         console.log(searchName)
     const resultObj = spells.filter(spell => {
       let name = spell.name || spell.define || '';
-       name.replace(/%20/g, " ");
       return name == searchName;
     })
 
