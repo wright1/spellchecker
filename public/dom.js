@@ -9,6 +9,11 @@ const description = document.getElementById('description');
 
 const domCb = (response) =>{
     console.log("This is the",response)
+    
+    //clear previous search result
+    spellTitle.textContent = "";
+    say.textContent = "";
+    description.textContent = "";
 
 
     // list of all items doesn't appear when user deletes all search box entry
@@ -59,18 +64,17 @@ const listValue = (e) =>{
 };
 
 const result = (response) =>{
-
+//displays search result
     const name = response[0].name || response[0].define || '';
     const pronouce = response[0].pronunciation || '';
     const describe = response[0].description;
     elSearch.value = "";
 
+
     spellTitle.textContent = name;
     say.textContent = pronouce;
     description.textContent = describe;
     
-
-    console.log(response)
 
 }
 
@@ -79,14 +83,16 @@ button.addEventListener("click", () =>{
     makeResultRequest(elSearch.value, result)
 })
 
+//places choosen option in the searchbar
 elList.addEventListener("click", (e) =>{
     console.log("list event triggered")
     // e.preventDefault();
     listValue()
 })
 
-//call xhr with every letter entered
+//call xhr with every letter entered/ deleted
 elSearch.addEventListener("keyup", (e) =>{
+    if (isNaN(e.target.value)) window.location.reload() ;
     console.log("event triggered")
     makeRequest(e.target.value, domCb)
 })
