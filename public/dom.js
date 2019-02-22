@@ -29,7 +29,7 @@ const domCb = (response) =>{
     //creates a div and link containing a name for every object returned 
     response.forEach((item) =>{
         const name = item.name || item.define || '';
-        //console.log(name)
+
         const newEl = document.createElement('div');
         const link = document.createElement('a');
         const newText = document.createTextNode(name);
@@ -51,7 +51,7 @@ const domCb = (response) =>{
 }
 
 const listValue = (e) =>{
-    console.log(event.target)
+    
     //places the chosen link text into the searchbar and removes all autocomplete suggestions
     let linkArr = document.querySelectorAll('a');
     event.preventDefault()
@@ -80,7 +80,6 @@ const result = (response) =>{
 button.addEventListener("click", () =>{
 
 
-    console.log("elsearch.value", elSearch.value)
 
     makeResultRequest(elSearch.value, result)
 })
