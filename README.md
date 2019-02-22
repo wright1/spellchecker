@@ -11,6 +11,10 @@ To try out spellChecker do the following:
 - enter `npm run dev` in the command line
 - enter `localhost:4000` into your web browswer
 
+## Wire Frame
+![spellcheckerwireframe](https://user-images.githubusercontent.com/20236080/53223644-f0be9a80-3669-11e9-8f2f-79f07b31173d.jpg)
+
+
 ## User Journey
 
 - User goes to the website and enters the first letter of spell into the searchbar, a list of options appear.
