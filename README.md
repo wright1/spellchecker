@@ -13,6 +13,6 @@ To try out spellChecker do the following:
 
 ## User Journey
 
-- User goes to page enters first letter of spell into the searchbar a list of options appear.
+- User goes to the website and enters the first letter of spell into the searchbar, a list of options appear.
 - User clicks on the relevant option, the selected option appears in the searchbar.
 - User clicks on the enter button a small description of spell appears beneath the search bar.
