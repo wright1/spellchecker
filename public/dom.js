@@ -8,7 +8,6 @@ const description = document.getElementById('description');
 
 
 const domCb = (response) =>{
-    console.log("This is the",response)
     
     //clear previous search result
     spellTitle.textContent = "";
@@ -80,6 +79,9 @@ const result = (response) =>{
 
 button.addEventListener("click", () =>{
 
+
+    console.log("elsearch.value", elSearch.value)
+
     makeResultRequest(elSearch.value, result)
 })
 
@@ -92,7 +94,8 @@ elList.addEventListener("click", (e) =>{
 
 //call xhr with every letter entered/ deleted
 elSearch.addEventListener("keyup", (e) =>{
-    if (isNaN(e.target.value)) window.location.reload() ;
+    
+     
     console.log("event triggered")
     makeRequest(e.target.value, domCb)
 })

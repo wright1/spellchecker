@@ -48,8 +48,7 @@ const publicRoute = (request, response, url) => {
     console.log(request.url)
     method = request.method;
     if (method === 'GET') {
-      // console.log('spells', spells[0]); // currently not logging!
-      //console.log(request.url.split('=')[1]);
+    
       const inputValue = request.url.split('=')[1];
   
       const filteredNames = spells.filter((spell) => {

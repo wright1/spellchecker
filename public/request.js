@@ -4,7 +4,7 @@ const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = () =>{
     if(xhr.readyState == 4 && xhr.status == 200){
         let spellObj = JSON.parse(xhr.responseText);
-       // console.log(spellObj[0])
+       
         callback(spellObj);
     }
 }
@@ -29,4 +29,4 @@ const makeResultRequest = (inputValue, callback) =>{
     xhr.send();
 }
 
-//`/search${inputValue}`
+
