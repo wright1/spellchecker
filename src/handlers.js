@@ -5,7 +5,7 @@ const spells = require('./data/spells.json');
 const homeRoute = (request, response) => {
 
     const method = request.method;
-    const filePath = path.join(__dirname, '..', 'public', 'index.html');
+    const filePath = path.join(__dirname,'..' ,'index.html');
     fs.readFile(filePath, (error, file) =>{
         if (error){
             console.log(error)
@@ -41,8 +41,6 @@ const publicRoute = (request, response, url) => {
   };
 
   const handleRequest = (request, response) =>{
-
-    console.log(request.url)
     method = request.method;
     if (method === 'GET') {
     
